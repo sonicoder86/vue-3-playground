@@ -30,3 +30,4 @@ recalculates the total price based on the items and used coupon.
 ### Contributing
 
 This project is under development. If you have any idea how to include more and more new features of Vue 3 in this application feel free to share your ideas in an issue/PR.
+
