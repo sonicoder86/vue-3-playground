@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "12"
 script: npm test
-before_deploy: npm run build
+before_deploy: npm run build && cp ./_config.yml ./dist/_config.yml
 deploy:
   provider: pages
   local_dir: dist
