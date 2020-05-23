@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - "12"
-script: echo "No test specified"
+script: npm test
 before_deploy: npm run build
 deploy:
   provider: pages
