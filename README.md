@@ -1,5 +1,8 @@
 # Vue 3 Playground
 
+[![Build Status](https://travis-ci.com/blacksonic/vue-3-playground.svg?branch=master)](https://travis-ci.com/blacksonic/vue-3-playground)
+[![Dependencies Status](https://david-dm.org/blacksonic/vue-3-playground/status.svg)](https://david-dm.org/blacksonic/vue-3-playground)
+
 Vue 3 Playground stands as a learning prjects for those who want to get familiar with the new features of Vue 3.
 
 Currently new features include reactivity, Composition Api and plugins.
