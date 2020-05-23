@@ -1,6 +1,6 @@
 <script>
-import { toRefs, version, onMounted, onUpdated, onUnmounted, watchEffect, watch, provide } from 'vue';
-import { versionSymbol } from './version-symbol';
+import { toRefs, onMounted, onUpdated, onUnmounted, watchEffect, watch } from 'vue';
+import { provideVersion } from './version';
 import Header from './Header.vue';
 import Coupon from './Coupon.vue';
 import { useCart } from './hooks';
@@ -12,7 +12,7 @@ export default {
     console.log('setup');
 
     const { product, secondName, secondPrice, secondQuantity, total, coupon, setCoupon } = useCart();
-    provide(versionSymbol, version);
+    provideVersion();
 
     watchEffect(() => console.log(`watchEffect: ${product.firstName} ${product.firstPrice}x${product.firstQuantity}`));
     watch([secondName], () => console.log(`watch: ${secondName.value} ${secondPrice.value}x${secondQuantity.value}`));
@@ -21,7 +21,7 @@ export default {
     onUpdated(() => console.log('updated'));
     onUnmounted(() => console.log('onunmounted'));
 
-    return { version, ...toRefs(product), secondName, secondPrice, secondQuantity, total, coupon, setCoupon };
+    return { ...toRefs(product), secondName, secondPrice, secondQuantity, total, coupon, setCoupon };
   }
 };
 </script>
