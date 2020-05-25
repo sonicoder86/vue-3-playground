@@ -1,5 +1,5 @@
 <script>
-import { toRefs, onMounted, onUpdated, onUnmounted, watchEffect, watch } from 'vue';
+import { toRefs, onMounted, onUpdated, onUnmounted, onErrorCaptured, watchEffect, watch, ref } from 'vue';
 import { provideVersion } from './version';
 import Header from './Header.vue';
 import Coupon from './Coupon.vue';
@@ -21,7 +21,13 @@ export default {
     onUpdated(() => console.log('updated'));
     onUnmounted(() => console.log('onunmounted'));
 
-    return { ...toRefs(product), secondName, secondPrice, secondQuantity, total, coupon, setCoupon };
+    const error = ref(null);
+    onErrorCaptured(e => {
+      error.value = e;
+      return true;
+    });
+
+    return { ...toRefs(product), secondName, secondPrice, secondQuantity, total, coupon, setCoupon, error };
   }
 };
 </script>
@@ -55,7 +61,19 @@ export default {
           </li>
         </ul>
 
-        <Coupon :percent="10" @select="setCoupon" />
+        <div v-if="error">
+          {{ error }}
+        </div>
+        <Suspense v-else>
+          <template #default>
+            <Coupon :percent="10" @select="setCoupon" />
+          </template>
+          <template #fallback>
+            <div class="spinner-border" role="status">
+              <span class="sr-only">Loading...</span>
+            </div>
+          </template>
+        </Suspense>
       </div>
 
       <div class="col-md-8 order-md-1">
@@ -101,3 +119,21 @@ export default {
     </footer>
   </div>
 </template>
+
+<style>
+  @keyframes rotate {
+    to { transform: rotate(360deg); }
+  }
+
+  .spinner-border {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    border: .25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border .75s linear infinite;
+    animation: rotate 1s linear infinite;
+  }
+</style>

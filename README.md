@@ -14,7 +14,7 @@ recalculates the total price based on the items and used coupon.
 
 The playground is available also [in online version](https://codesandbox.io/s/github/blacksonic/vue-3-playground).
 
-### Methods covered
+### Methods and consepts covered
 
 - [createApp](https://github.com/blacksonic/vue-3-playground/blob/master/src/main.js)
 - [ref](https://github.com/blacksonic/vue-3-playground/blob/master/src/hooks.js)
@@ -29,6 +29,8 @@ The playground is available also [in online version](https://codesandbox.io/s/gi
 - [emit](https://github.com/blacksonic/vue-3-playground/blob/master/src/Coupon.vue)
 - [provide](https://github.com/blacksonic/vue-3-playground/blob/master/src/version.js)
 - [inject](https://github.com/blacksonic/vue-3-playground/blob/master/src/version.js)
+- [Suspense](https://github.com/blacksonic/vue-3-playground/blob/master/src/App.vue)
+- [Async Component](https://github.com/blacksonic/vue-3-playground/blob/master/src/Coupon.vue)
 
 ### Contributing
 
