@@ -3,11 +3,12 @@ import { toRefs, onMounted, onUpdated, onUnmounted, onErrorCaptured, watchEffect
 import { provideVersion } from './version';
 import Header from './Header.vue';
 import Coupon from './Coupon.vue';
+import Item from './Item.vue';
 import { useCart } from './hooks';
 
 export default {
   name: 'App',
-  components: { Header, Coupon },
+  components: { Header, Coupon, Item },
   setup() {
     console.log('setup');
 
@@ -79,20 +80,7 @@ export default {
     <h4 class="mb-3">Items</h4>
     <form class="needs-validation">
 
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <label for="first-item-name">Name</label>
-          <input v-model="firstName" type="text" class="form-control" id="first-item-name">
-        </div>
-        <div class="col-md-3 mb-3">
-          <label for="first-item-price">Price</label>
-          <input v-model="firstPrice" type="number" class="form-control" id="first-item-price">
-        </div>
-        <div class="col-md-3 mb-3">
-          <label for="first-item-quantity">Quantity</label>
-          <input v-model="firstQuantity" type="number" class="form-control" id="first-item-quantity">
-        </div>
-      </div>
+      <Item v-model:name="firstName" v-model:price="firstPrice" v-model:quantity="firstQuantity" />
 
       <div class="row">
         <div class="col-md-6 mb-3">

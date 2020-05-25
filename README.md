@@ -33,6 +33,7 @@ The playground is available also [in online version](https://codesandbox.io/s/gi
 - [Async Component](https://github.com/blacksonic/vue-3-playground/blob/master/src/Coupon.vue)
 - [Teleport/Portal](https://github.com/blacksonic/vue-3-playground/blob/master/src/Header.vue)
 - [Fragments/MultiRoot](https://github.com/blacksonic/vue-3-playground/blob/master/src/App.vue)
+- [Multiple v-models](https://github.com/blacksonic/vue-3-playground/blob/master/src/App.vue)
 
 ### Contributing
 
