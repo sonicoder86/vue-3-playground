@@ -19,4 +19,7 @@ export default {
     Below is an example form built with the Vue {{ version }} Composition API.
   </p>
 </div>
+<Teleport to="#footer">
+  <p class="mb-1">&copy; 2020 blacksonic</p>
+</Teleport>
 </template>
