@@ -4,11 +4,12 @@ import { provideVersion } from './version';
 import Header from './Header.vue';
 import Coupon from './Coupon.vue';
 import Item from './Item.vue';
+import Exchange from './Exchange.vue';
 import { useCart } from './hooks';
 
 export default {
   name: 'App',
-  components: { Header, Coupon, Item },
+  components: { Header, Coupon, Item, Exchange },
   setup() {
     console.log('setup');
 
@@ -61,12 +62,14 @@ export default {
       </li>
     </ul>
 
+    <Coupon :percent="10" @select="setCoupon" />
+
     <div v-if="error">
       {{ error }}
     </div>
     <Suspense v-else>
       <template #default>
-        <Coupon :percent="10" @select="setCoupon" />
+        <Exchange />
       </template>
       <template #fallback>
         <div class="spinner-border" role="status">

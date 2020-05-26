@@ -4,13 +4,8 @@ import { ref } from 'vue';
 export default {
   name: 'Coupon',
   props: ['percent'],
-  async setup(props, { emit }) {
-    const percent = await (new Promise(
-      resolve => setTimeout(
-        () => resolve(ref(props.percent)),
-        1000
-      )
-    ));
+  setup(props, { emit }) {
+    const percent = ref(props.percent);
     const useCoupon = () => emit('select', percent.value);
 
     return { percent, useCoupon };
