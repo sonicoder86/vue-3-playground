@@ -5,12 +5,13 @@ import Header from './Header.vue';
 import Coupon from './Coupon.vue';
 import Item from './Item.vue';
 import Exchange from './Exchange.vue';
+import Shipping from './Shipping.jsx';
 import { useCart } from './hooks';
 import { useStore } from 'vuex';
 
 export default {
   name: 'App',
-  components: { Header, Coupon, Item, Exchange },
+  components: { Header, Coupon, Item, Exchange, Shipping },
   setup() {
     console.log('setup');
     const store = useStore();
@@ -105,6 +106,8 @@ export default {
         </div>
       </div>
     </form>
+
+    <Shipping />
   </div>
 
 </div>

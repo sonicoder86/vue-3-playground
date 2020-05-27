@@ -33,6 +33,8 @@ The playground is available also [in online version](https://codesandbox.io/s/gi
 - [provide](https://github.com/blacksonic/vue-3-playground/blob/master/src/version.js)
 - [inject](https://github.com/blacksonic/vue-3-playground/blob/master/src/version.js)
 - [createStore](https://github.com/blacksonic/vue-3-playground/blob/master/src/store.js)
+- [defineComponent](https://github.com/blacksonic/vue-3-playground/blob/master/src/Shipping.vue)
+- [JSX](https://github.com/blacksonic/vue-3-playground/blob/master/src/Shipping.vue)
 - [Suspense](https://github.com/blacksonic/vue-3-playground/blob/master/src/App.vue)
 - [Async Component](https://github.com/blacksonic/vue-3-playground/blob/master/src/Exchange.vue)
 - [Teleport/Portal](https://github.com/blacksonic/vue-3-playground/blob/master/src/Header.vue)
