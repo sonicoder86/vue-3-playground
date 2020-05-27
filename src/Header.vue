@@ -1,11 +1,15 @@
 <script>
 import { useVersion } from './version';
+import { useStore } from 'vuex';
 
 export default {
   name: 'Header',
   setup() {
+    const store = useStore();
+
     return {
-      version: useVersion()
+      version: useVersion(),
+      state: store.state
     };
   }
 };
@@ -20,6 +24,6 @@ export default {
   </p>
 </div>
 <Teleport to="#footer">
-  <p class="mb-1">&copy; 2020 blacksonic</p>
+  <p class="mb-1">&copy; {{ state.year }} blacksonic</p>
 </Teleport>
 </template>

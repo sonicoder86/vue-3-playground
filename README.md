@@ -17,6 +17,7 @@ The playground is available also [in online version](https://codesandbox.io/s/gi
 ### New APIs covered
 
 - [createApp](https://github.com/blacksonic/vue-3-playground/blob/master/src/main.js)
+- [use](https://github.com/blacksonic/vue-3-playground/blob/master/src/main.js)
 - [ref](https://github.com/blacksonic/vue-3-playground/blob/master/src/hooks.js)
 - [reactive](https://github.com/blacksonic/vue-3-playground/blob/master/src/hooks.js)
 - [computed](https://github.com/blacksonic/vue-3-playground/blob/master/src/hooks.js)
@@ -27,9 +28,11 @@ The playground is available also [in online version](https://codesandbox.io/s/gi
 - [onUnmount](https://github.com/blacksonic/vue-3-playground/blob/master/src/App.vue)
 - [onUpdate](https://github.com/blacksonic/vue-3-playground/blob/master/src/App.vue)
 - [onErrorCaptured](https://github.com/blacksonic/vue-3-playground/blob/master/src/App.vue)
+- [useStore](https://github.com/blacksonic/vue-3-playground/blob/master/src/App.vue)
 - [emit](https://github.com/blacksonic/vue-3-playground/blob/master/src/Coupon.vue)
 - [provide](https://github.com/blacksonic/vue-3-playground/blob/master/src/version.js)
 - [inject](https://github.com/blacksonic/vue-3-playground/blob/master/src/version.js)
+- [createStore](https://github.com/blacksonic/vue-3-playground/blob/master/src/store.js)
 - [Suspense](https://github.com/blacksonic/vue-3-playground/blob/master/src/App.vue)
 - [Async Component](https://github.com/blacksonic/vue-3-playground/blob/master/src/Exchange.vue)
 - [Teleport/Portal](https://github.com/blacksonic/vue-3-playground/blob/master/src/Header.vue)

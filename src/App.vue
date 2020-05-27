@@ -6,12 +6,14 @@ import Coupon from './Coupon.vue';
 import Item from './Item.vue';
 import Exchange from './Exchange.vue';
 import { useCart } from './hooks';
+import { useStore } from 'vuex';
 
 export default {
   name: 'App',
   components: { Header, Coupon, Item, Exchange },
   setup() {
     console.log('setup');
+    const store = useStore();
 
     const { product, secondName, secondPrice, secondQuantity, total, coupon, setCoupon } = useCart();
     provideVersion();
@@ -19,7 +21,10 @@ export default {
     watchEffect(() => console.log(`watchEffect: ${product.firstName} ${product.firstPrice}x${product.firstQuantity}`));
     watch([secondName], () => console.log(`watch: ${secondName.value} ${secondPrice.value}x${secondQuantity.value}`));
 
-    onMounted(() => console.log('mounted'));
+    onMounted(() => {
+      console.log('mounted');
+      store.dispatch('onSetYear', new Date().getFullYear());
+    });
     onUpdated(() => console.log('updated'));
     onUnmounted(() => console.log('onunmounted'));
 
