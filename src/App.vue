@@ -5,13 +5,14 @@ import Header from './Header.vue';
 import Coupon from './Coupon.vue';
 import Item from './Item.vue';
 import Exchange from './Exchange.vue';
-import Shipping from './Shipping.jsx';
+import AsyncPayment from './AsyncPayment';
+import Spinner from './Spinner';
 import { useCart } from './hooks';
 import { useStore } from 'vuex';
 
 export default {
   name: 'App',
-  components: { Header, Coupon, Item, Exchange, Shipping },
+  components: { Header, Coupon, Item, Exchange, AsyncPayment, Spinner },
   setup() {
     console.log('setup');
     const store = useStore();
@@ -78,9 +79,7 @@ export default {
         <Exchange />
       </template>
       <template #fallback>
-        <div class="spinner-border" role="status">
-          <span class="sr-only">Loading...</span>
-        </div>
+        <Spinner />
       </template>
     </Suspense>
   </div>
@@ -107,7 +106,8 @@ export default {
       </div>
     </form>
 
-    <Shipping />
+    <h4 class="mb-3">Payment</h4>
+    <AsyncPayment />
   </div>
 
 </div>
