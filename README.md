@@ -47,6 +47,18 @@ The playground is available also [in online version](https://codesandbox.io/s/gi
 - [Scoped slot](https://github.com/blacksonic/vue-3-playground/blob/master/src/components/Cart.vue)
 - [Custom directive](https://github.com/blacksonic/vue-3-playground/blob/master/src/at-sign.js)
 
+### Further articles/videos
+
+- [Composition API docs](https://composition-api.vuejs.org/)
+- [RFCs describing new features](https://github.com/vuejs/rfcs)
+- [Reactivity: Vue 2 vs Vue 3](https://www.vuemastery.com/blog/Reactivity-Vue2-vs-Vue3/)
+- [Global Vue Meetup featuring Evan You](https://www.youtube.com/watch?v=Nk3cC7xNfkk)
+- [State of Vuenion](https://www.vuemastery.com/conferences/vueconf-us-2020/state-of-the-vuenion/)
+- [The process: Making Vue 3](https://increment.com/frontend/making-vue-3/)
+- [Vue 3 Async Components and Bundle Splitting](https://lmiller1990.github.io/electic/posts/20200503_vue_3_async_components_and_bundle_splitting.html)
+- [Reactivity in Vue 2, 3, and the Composition API](https://vuejsdevelopers.com/2017/03/05/vue-js-reactivity/)
+- [React Hooks vs. Vue 3 Composition API](https://academy.esveo.com/en/blog/Yr)
+
 ### Contributing
 
 This project is under development. If you have any idea how to include more and more new features of Vue 3 in this application feel free to share your ideas in an issue/PR.
