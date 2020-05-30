@@ -4,9 +4,7 @@
     <label for="username">Default label</label>
   </slot>
   <div class="input-group">
-    <div class="input-group-prepend">
-      <span class="input-group-text">@</span>
-    </div>
+    <div class="input-group-prepend" v-at-sign:foo.a.b="label"></div>
     <input type="text" class="form-control" id="username" placeholder="Username" />
     <div class="invalid-feedback" style="width: 100%;">
       Your username is required.

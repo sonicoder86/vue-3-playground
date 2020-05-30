@@ -41,10 +41,11 @@ The playground is available also [in online version](https://codesandbox.io/s/gi
 - [JSX](https://github.com/blacksonic/vue-3-playground/blob/master/src/components/Payment.jsx)
 - [Suspense](https://github.com/blacksonic/vue-3-playground/blob/master/src/components/Cart.vue)
 - [Async Component](https://github.com/blacksonic/vue-3-playground/blob/master/src/components/Exchange.vue)
-- [Teleport/Portal](https://github.com/blacksonic/vue-3-playground/blob/master/src/components/Header.vue)
-- [Fragments/MultiRoot](https://github.com/blacksonic/vue-3-playground/blob/master/src/App.vue)
+- [Teleport](https://github.com/blacksonic/vue-3-playground/blob/master/src/components/Header.vue)
+- [Fragments](https://github.com/blacksonic/vue-3-playground/blob/master/src/App.vue)
 - [Multiple v-models](https://github.com/blacksonic/vue-3-playground/blob/master/src/components/Cart.vue)
 - [Scoped slot](https://github.com/blacksonic/vue-3-playground/blob/master/src/components/Cart.vue)
+- [Custom directive](https://github.com/blacksonic/vue-3-playground/blob/master/src/at-sign.js)
 
 ### Contributing
 
