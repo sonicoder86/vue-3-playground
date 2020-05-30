@@ -6,7 +6,7 @@ import Exchange from './Exchange.vue';
 import AsyncPayment from './AsyncPayment';
 import Spinner from './Spinner';
 import Username from './Username.vue';
-import { useCart } from './hooks';
+import { useCart } from '../hooks';
 
 export default {
   name: 'Main',

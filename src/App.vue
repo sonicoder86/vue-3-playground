@@ -1,7 +1,7 @@
 <script>
 import { onMounted } from 'vue';
 import { useStore } from 'vuex';
-import Header from './Header.vue';
+import Header from './components/Header.vue';
 import { provideVersion } from './version';
 
 export default {

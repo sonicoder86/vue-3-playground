@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
-import Cart from './Cart.vue';
-import Checkout from './Checkout.vue';
+import Cart from './components/Cart.vue';
+import Checkout from './components/Checkout.vue';
 
 export default createRouter({
   history: createWebHashHistory(),
