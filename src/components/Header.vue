@@ -5,11 +5,11 @@ import { useStore } from 'vuex';
 export default {
   name: 'Header',
   setup() {
-    const store = useStore();
+    const { state } = useStore();
 
     return {
       version: useVersion(),
-      state: store.state
+      state
     };
   }
 };

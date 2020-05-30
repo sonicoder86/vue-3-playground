@@ -8,11 +8,11 @@ export default {
   name: 'App',
   components: { Header },
   setup() {
-    const store = useStore();
+    const { dispatch } = useStore();
     provideVersion();
 
     onMounted(() => {
-      store.dispatch('onSetYear', new Date().getFullYear());
+      dispatch('onSetYear', new Date().getFullYear());
     });
   }
 };
