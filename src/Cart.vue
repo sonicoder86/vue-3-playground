@@ -5,11 +5,12 @@ import Item from './Item.vue';
 import Exchange from './Exchange.vue';
 import AsyncPayment from './AsyncPayment';
 import Spinner from './Spinner';
+import Username from './Username.vue';
 import { useCart } from './hooks';
 
 export default {
   name: 'Main',
-  components: { Coupon, Item, Exchange, AsyncPayment, Spinner },
+  components: { Coupon, Item, Exchange, AsyncPayment, Spinner, Username },
   setup() {
     console.log('setup');
 
@@ -97,6 +98,10 @@ export default {
         </div>
       </div>
     </form>
+
+    <Username v-slot="{ label }">
+      <label for="username">{{ label }}</label>
+    </Username>
 
     <h4 class="mb-3">Payment</h4>
     <AsyncPayment />
