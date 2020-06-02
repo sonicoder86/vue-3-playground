@@ -62,7 +62,7 @@ export default {
       </li>
     </ul>
 
-    <Coupon :percent="10" @select="setCoupon" />
+    <Coupon :percent="10" @redeem="setCoupon" />
 
     <div v-if="error">
       {{ error }}
