@@ -6,7 +6,7 @@ export default {
   props: ['percent'],
   setup(props, { emit }) {
     const percent = ref(props.percent);
-    const useCoupon = () => emit('select', percent.value);
+    const useCoupon = () => emit('redeem', percent.value);
 
     return { percent, useCoupon };
   }
