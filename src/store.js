@@ -5,9 +5,13 @@ export default createStore({
     year: '1970'
   },
   actions: {
-    onSetYear: ({ commit }, year) => commit('setYear', { year })
+    onSetYear: ({ commit }, year) => {
+      commit('setYear', year);
+    }
   },
   mutations: {
-    setYear: (state, { year }) => state.year = year
+    setYear: (state, year) => {
+      state.year = year;
+    }
   }
 });

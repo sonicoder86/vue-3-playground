@@ -9,8 +9,9 @@ import Username from './Username.vue';
 import { useCart } from '../hooks';
 
 export default {
-  name: 'Main',
+  name: 'Cart',
   components: { Coupon, Item, Exchange, AsyncPayment, Spinner, Username },
+
   setup() {
     console.log('setup');
 

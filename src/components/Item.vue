@@ -1,6 +1,9 @@
 <script>
 export default {
+  name: 'Item',
   props: ['name', 'price', 'quantity'],
+  emits: ['update:name', 'update:price', 'update:quantity'],
+
   setup(props, { emit }) {
     const updateName = value => emit('update:name', value);
     const updatePrice = value => emit('update:price', value);

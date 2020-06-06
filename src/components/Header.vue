@@ -4,6 +4,7 @@ import { useStore } from 'vuex';
 
 export default {
   name: 'Header',
+
   setup() {
     const { state } = useStore();
 

@@ -4,6 +4,8 @@ import { ref } from 'vue';
 export default {
   name: 'Coupon',
   props: ['percent'],
+  emits: ['redeem'],
+
   setup(props, { emit }) {
     const percent = ref(props.percent);
     const useCoupon = () => emit('redeem', percent.value);
