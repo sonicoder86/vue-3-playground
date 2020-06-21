@@ -22,7 +22,8 @@
     "rootDir": "./",
     "sourceMap": true,
     "strictNullChecks": true,
-    "target": "esnext"
+    "target": "esnext",
+    "isolatedModules": true
   },
   "exclude": ["./node_modules"]
 }

@@ -25,6 +25,6 @@ export default {
   </p>
 </div>
 <Teleport to="#footer">
-  <p class="mb-1">&copy; {{ state.year }} blacksonic</p>
+  <p class="mb-1">&copy; {{ state.year }} <x-username /></p>
 </Teleport>
 </template>

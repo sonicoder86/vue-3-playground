@@ -3,5 +3,10 @@ import App from './App.vue';
 import store from './store';
 import router from './router';
 import AtSign from './at-sign';
+import './custom-element';
 
-createApp(App).use(store).use(router).directive('AtSign', AtSign).mount('#app');
+const app = createApp(App);
+app.config.isCustomElement = tag => /^x-/.test(tag);
+app.use(store).use(router);
+app.directive('AtSign', AtSign);
+app.mount('#app');

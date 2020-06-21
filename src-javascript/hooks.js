@@ -1,4 +1,4 @@
-import { reactive, ref, computed } from 'vue';
+import { reactive, ref, computed, readonly } from 'vue';
 
 export const useCart = () => {
   const product = reactive({ firstName: 'First Product', firstPrice: 10, firstQuantity: 1 });
