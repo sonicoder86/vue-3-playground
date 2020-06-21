@@ -1,7 +1,7 @@
-export class XTimer extends HTMLElement {
+export class XUsername extends HTMLElement {
   connectedCallback() {
     this.innerText = 'blacksonic';
   }
 }
 
-customElements.define('x-username', XTimer);
+customElements.define('x-username', XUsername);
