@@ -1,3 +1,6 @@
 module.exports = {
-  base: './'
+  base: './',
+  vueCompilerOptions: {
+    isCustomElement: tag => /^x-/.test(tag)
+  }
 };
