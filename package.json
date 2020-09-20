@@ -11,12 +11,12 @@
     "test": "echo 'No test specified'"
   },
   "dependencies": {
-    "vue": "^3.0.0-rc.5",
-    "vue-router": "^4.0.0-beta.6",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0-beta.11",
     "vuex": "^4.0.0-beta.4"
   },
   "devDependencies": {
     "vite": "^1.0.0-rc.4",
-    "@vue/compiler-sfc": "^3.0.0-rc.5"
+    "@vue/compiler-sfc": "^3.0.0"
   }
 }

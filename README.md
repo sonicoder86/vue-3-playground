@@ -4,7 +4,7 @@
 [![Dependencies Status](https://david-dm.org/blacksonic/vue-3-playground/status.svg)](https://david-dm.org/blacksonic/vue-3-playground)
 
 Vue 3 Playground stands as a learning project for those who want to get familiar with [the new features of Vue 3](https://composition-api.vuejs.org/).
-The beta version of [the official documentation](https://v3.vuejs.org/) is now available!
+[The official documentation](https://v3.vuejs.org/) is now available!
 
 The project aims to include all the new features. If you find something missing please create an issue/PR.
 
