@@ -11,12 +11,13 @@
     "test": "npm run test:unit:javascript && npm run test:unit:typescript",
     "test:unit:javascript": "jest --config=jest.unit.config.js src-javascript",
     "test:unit:typescript": "jest --config=jest.unit.config.js src-typescript",
-    "test:e2e:javascript": "start-server-and-test start http://localhost:3000 e2e:javascript",
-    "test:e2e:typescript": "start-server-and-test start http://localhost:3000 e2e:typescript",
+    "test:e2e:javascript": "DEBUG=start-server-and-test start-server-and-test start http-get://localhost:3000 e2e:javascript",
+    "test:e2e:typescript": "DEBUG=start-server-and-test start-server-and-test start http://localhost:3000 e2e:typescript",
     "e2e:javascript": "jest --config=jest.e2e.config.js e2e/javascript",
     "e2e:typescript": "jest --config=jest.e2e.config.js e2e/typescript"
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "vue": "^3.0.5",
     "vue-router": "^4.0.1",
     "vuex": "^4.0.0-rc.2"
