@@ -22,7 +22,7 @@
     "rootDir": "./",
     "sourceMap": true,
     "strictNullChecks": true,
-    "target": "esnext",
+    "target": "ES2020",
     "isolatedModules": true
   },
   "exclude": ["./node_modules"]
