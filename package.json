@@ -8,16 +8,15 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "test": "npm run test:unit:javascript && npm run test:unit:typescript",
+    "test": "npm run test:unit:javascript && npm run test:unit:typescript && npm run test:e2e:javascript && npm run test:e2e:typescript",
     "test:unit:javascript": "jest --config=jest.unit.config.js src-javascript",
     "test:unit:typescript": "jest --config=jest.unit.config.js src-typescript",
-    "test:e2e:javascript": "DEBUG=start-server-and-test start-server-and-test start http-get://localhost:3000 e2e:javascript",
-    "test:e2e:typescript": "DEBUG=start-server-and-test start-server-and-test start http://localhost:3000 e2e:typescript",
+    "test:e2e:javascript": "start-server-and-test start http-get://localhost:3000 e2e:javascript",
+    "test:e2e:typescript": "start-server-and-test start http-get://localhost:3000 e2e:typescript",
     "e2e:javascript": "jest --config=jest.e2e.config.js e2e/javascript",
     "e2e:typescript": "jest --config=jest.e2e.config.js e2e/typescript"
   },
   "dependencies": {
-    "axios": "^0.21.1",
     "vue": "^3.0.5",
     "vue-router": "^4.0.1",
     "vuex": "^4.0.0-rc.2"
@@ -37,7 +36,7 @@
     "jest": "^26.6.3",
     "jest-puppeteer": "^4.4.0",
     "puppeteer": "^5.5.0",
-    "start-server-and-test": "^1.11.7",
+    "start-server-and-test": "blacksonic/start-server-and-test#master",
     "ts-jest": "^26.5.0",
     "typescript": "^4.1.3",
     "vite": "^2.0.0-beta.56",

@@ -1,6 +1,6 @@
 import 'expect-puppeteer';
 
-describe('Google', () => {
+describe('Vue 3 Playground', () => {
   beforeAll(async () => {
     await page.goto('http://localhost:3000')
   });
