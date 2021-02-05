@@ -9,7 +9,7 @@ export default createStore<State>({
     year: '1970'
   },
   actions: {
-    onSetYear: (context: ActionContext, year: string) => {
+    onSetYear: (context: ActionContext<State, State>, year: string) => {
       context.commit('setYear', year);
     }
   },
