@@ -1,12 +1,14 @@
 <script>
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   async setup() {
     const response = await fetch('https://api.exchangeratesapi.io/latest');
     const exchangeRates = await response.json();
 
     return { rates: exchangeRates.rates };
   }
-};
+});
 </script>
 
 <template>

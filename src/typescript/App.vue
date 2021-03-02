@@ -1,11 +1,11 @@
 <script lang="ts">
-import { onMounted } from 'vue';
+import { defineComponent, onMounted } from 'vue';
 import { useStore } from 'vuex';
 import Header from './components/Header.vue';
 import { provideVersion } from './version';
 import { State } from './store';
 
-export default {
+export default defineComponent({
   name: 'App',
   components: { Header },
   setup() {
@@ -16,7 +16,7 @@ export default {
       dispatch('onSetYear', new Date().getFullYear());
     });
   }
-};
+});
 </script>
 
 <template>

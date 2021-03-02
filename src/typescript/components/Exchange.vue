@@ -1,4 +1,5 @@
 <script lang="ts">
+import { defineComponent } from 'vue';
 interface ApiResponse {
   rates: {
     USD: string,
@@ -6,14 +7,14 @@ interface ApiResponse {
   }
 }
 
-export default {
+export default defineComponent({
   async setup() {
     const response = await fetch('https://api.exchangeratesapi.io/latest');
     const exchangeRates: ApiResponse = await response.json();
 
     return { rates: exchangeRates.rates };
   }
-};
+});
 </script>
 
 <template>

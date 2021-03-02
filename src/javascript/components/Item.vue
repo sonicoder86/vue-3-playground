@@ -1,5 +1,7 @@
 <script>
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'Item',
   props: ['name', 'price', 'quantity'],
   emits: ['update:name', 'update:price', 'update:quantity'],
@@ -11,7 +13,7 @@ export default {
 
     return { updateName, updatePrice, updateQuantity };
   }
-};
+});
 </script>
 
 <template>

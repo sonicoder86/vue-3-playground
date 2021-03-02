@@ -1,7 +1,7 @@
 <script>
-import { ref } from 'vue';
+import { defineComponent, ref } from 'vue';
 
-export default {
+export default defineComponent({
   name: 'Coupon',
   props: ['percent'],
   emits: ['redeem'],
@@ -12,7 +12,7 @@ export default {
 
     return { percent, useCoupon };
   }
-}
+});
 </script>
 
 <template>

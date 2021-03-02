@@ -1,7 +1,8 @@
 <script>
+import { defineComponent } from 'vue';
 import { useRoute } from 'vue-router';
 
-export default {
+export default defineComponent({
   name: 'Checkout',
 
   setup() {
@@ -9,7 +10,7 @@ export default {
 
     return { path };
   }
-};
+});
 </script>
 
 <template>

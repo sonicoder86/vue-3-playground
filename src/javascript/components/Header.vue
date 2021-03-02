@@ -1,8 +1,9 @@
 <script>
-import { useVersion } from '../version';
+import { defineComponent } from 'vue';
 import { useStore } from 'vuex';
+import { useVersion } from '../version';
 
-export default {
+export default defineComponent({
   name: 'Header',
 
   setup() {
@@ -13,7 +14,7 @@ export default {
       state
     };
   }
-};
+});
 </script>
 
 <template>

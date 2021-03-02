@@ -14,11 +14,13 @@
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue';
+
+export default defineComponent({
   name: 'Username',
 
   setup() {
     return { label: 'Username' };
   }
-}
+});
 </script>

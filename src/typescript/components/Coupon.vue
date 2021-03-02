@@ -1,9 +1,9 @@
 <script lang="ts">
-import { ref, SetupContext } from 'vue';
+import { defineComponent, ref, SetupContext } from 'vue';
 type EmitOption = 'redeem';
 type Props = { percent: number };
 
-export default {
+export default defineComponent({
   name: 'Coupon',
   props: ['percent'],
   emits: ['redeem'],
@@ -14,7 +14,7 @@ export default {
 
     return { percent, useCoupon };
   }
-}
+});
 </script>
 
 <template>

@@ -1,9 +1,10 @@
 <script lang="ts">
+import { defineComponent } from 'vue';
 import { useVersion } from '../version';
 import { useStore } from 'vuex';
 import { State } from '../store';
 
-export default {
+export default defineComponent({
   name: 'Header',
 
   setup() {
@@ -14,7 +15,7 @@ export default {
       state
     };
   }
-};
+});
 </script>
 
 <template>

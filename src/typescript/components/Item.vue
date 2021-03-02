@@ -1,9 +1,9 @@
 <script lang="ts">
-import { SetupContext } from 'vue';
+import { defineComponent, SetupContext } from 'vue';
 type EmitOption = 'update:name' | 'update:price' | 'update:quantity';
 type Props = { name: string, prices: number, quantity: number };
 
-export default {
+export default defineComponent({
   name: 'Item',
   props: ['name', 'price', 'quantity'],
   emits: ['update:name', 'update:price', 'update:quantity'],
@@ -15,7 +15,7 @@ export default {
 
     return { updateName, updatePrice, updateQuantity };
   }
-};
+});
 </script>
 
 <template>

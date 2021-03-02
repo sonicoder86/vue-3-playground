@@ -1,5 +1,5 @@
 <script lang="ts">
-import { toRefs, onMounted, onUpdated, onUnmounted, onErrorCaptured, watchEffect, watch, ref } from 'vue';
+import { toRefs, onMounted, onUpdated, onUnmounted, onErrorCaptured, watchEffect, watch, ref, defineComponent } from 'vue';
 import Coupon from './Coupon.vue';
 import Item from './Item.vue';
 import Exchange from './Exchange.vue';
@@ -8,7 +8,7 @@ import Spinner from './Spinner';
 import Username from './Username.vue';
 import { useCart } from '../hooks';
 
-export default {
+export default defineComponent({
   name: 'Cart',
   components: { Coupon, Item, Exchange, AsyncPayment, Spinner, Username },
 
@@ -26,7 +26,7 @@ export default {
     onUpdated(() => console.log('updated'));
     onUnmounted(() => console.log('onunmounted'));
 
-    const error = ref(null);
+    const error = ref<Error | null>(null);
     onErrorCaptured((e: Error) => {
       error.value = e;
       return true;
@@ -34,7 +34,7 @@ export default {
 
     return { ...toRefs(product), secondName, secondPrice, secondQuantity, total, coupon, setCoupon, error };
   }
-};
+});
 </script>
 
 <template>
