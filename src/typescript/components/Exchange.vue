@@ -1,23 +1,26 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 interface ApiResponse {
+  date: string,
+  base: string,
   rates: {
-    USD: string,
-    GBP: string
+    USD: number,
+    GBP: number
   }
 }
 
 export default defineComponent({
   async setup() {
-    const url = 'http://data.fixer.io/api/latest?access_key=534719332efb7559a8f331ef73491776&format=1';
-    try {
-      const response = await fetch(url);
-      const exchangeRates: ApiResponse = await response.json();
+    const exchangeRates: ApiResponse = await Promise.resolve({
+      base: 'EUR',
+      date: '2021-05-08',
+      rates: {
+        GBP: 0.870389,
+        USD: 1.216325,
+      }
+    });
 
-      return { rates: exchangeRates.rates };
-    } catch(e) {
-      console.error('failed to fetch exchange rates', e);
-    }
+    return { rates: exchangeRates.rates };
   }
 });
 </script>
