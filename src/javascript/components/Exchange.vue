@@ -4,10 +4,14 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   async setup() {
     const url = 'http://data.fixer.io/api/latest?access_key=534719332efb7559a8f331ef73491776&format=1';
-    const response = await fetch(url);
-    const exchangeRates = await response.json();
+    try {
+      const response = await fetch(url);
+      const exchangeRates = await response.json();
 
-    return { rates: exchangeRates.rates };
+      return { rates: exchangeRates.rates };
+    } catch(e) {
+      console.error('failed to fetch exchange rates', e);
+    }
   }
 });
 </script>

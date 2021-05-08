@@ -9,10 +9,15 @@ interface ApiResponse {
 
 export default defineComponent({
   async setup() {
-    const response = await fetch('https://api.exchangeratesapi.io/latest');
-    const exchangeRates: ApiResponse = await response.json();
+    const url = 'http://data.fixer.io/api/latest?access_key=534719332efb7559a8f331ef73491776&format=1';
+    try {
+      const response = await fetch(url);
+      const exchangeRates: ApiResponse = await response.json();
 
-    return { rates: exchangeRates.rates };
+      return { rates: exchangeRates.rates };
+    } catch(e) {
+      console.error('failed to fetch exchange rates', e);
+    }
   }
 });
 </script>
