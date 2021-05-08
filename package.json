@@ -17,24 +17,25 @@
     "e2e:typescript": "cypress run --config-file cypress-typescript.json"
   },
   "dependencies": {
-    "vue": "^3.0.5",
-    "vue-router": "^4.0.3",
+    "vue": "3.0.6",
+    "vue-router": "^4.0.6",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
-    "@babel/preset-env": "^7.13.12",
-    "@vitejs/plugin-vue": "^1.1.4",
-    "@vitejs/plugin-vue-jsx": "^1.1.2",
-    "@vue/compiler-sfc": "^3.0.5",
+    "@babel/preset-env": "^7.14.1",
+    "@types/jest": "^26.0.23",
+    "@vitejs/plugin-vue": "^1.2.2",
+    "@vitejs/plugin-vue-jsx": "^1.1.4",
+    "@vue/compiler-sfc": "3.0.6",
     "@vue/test-utils": "2.0.0-rc.0",
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^26.6.3",
-    "cypress": "^6.5.0",
+    "cypress": "^6.9.1",
     "jest": "^26.6.3",
-    "start-server-and-test": "^1.12.0",
-    "ts-jest": "^26.5.0",
-    "typescript": "^4.2.3",
-    "vite": "^2.1.2",
+    "start-server-and-test": "^1.12.1",
+    "ts-jest": "^26.5.6",
+    "typescript": "^4.2.4",
+    "vite": "^2.2.4",
     "vue-jest": "^5.0.0-alpha.8"
   },
   "babel": {
@@ -48,5 +49,8 @@
         }
       ]
     ]
+  },
+  "engines": {
+    "node": "14.16.1"
   }
 }
